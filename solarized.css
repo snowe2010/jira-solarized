@@ -15,7 +15,6 @@
     --blue: #268bd2;
     --cyan: #2aa198;
     --green: #859900;
-    
     /* Dark mode */
     --background: var(--base03);
     --background-highlights: var(--base02);
@@ -32,18 +31,22 @@
     */
 }
 
+
 /****************************************************************\
 /****************************************************************\
 /****************       Global things      **********************\
 /****************************************************************\
 /****************************************************************\
 */
-
-.aui-button, .aui-button:visited, a.aui-button {
+.aui-button,
+.aui-button:visited,
+a.aui-button {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
-.aui-button-subtle.aui-button:hover .aui-theme-default .aui-button.aui-button-subtle:hover, .aui-button:hover {
+
+.aui-button-subtle.aui-button:hover .aui-theme-default .aui-button.aui-button-subtle:hover,
+.aui-button:hover {
     background-color: var(--secondary-content);
     color: var(--emphasized-content);
 }
@@ -52,29 +55,61 @@
     background-color: var(--background) !important;
 }
 
+
 /* keeps forms colored even on edit */
-form.aui .text, form.aui .password, form.aui .upfile, form.aui .textarea, form.aui .select, form.aui .multi-select, form.aui .aui-select2-container {
+form.aui .text,
+form.aui .password,
+form.aui .upfile,
+form.aui .textarea,
+form.aui .select,
+form.aui .multi-select,
+form.aui .aui-select2-container {
     background-color: var(--background-highlights) !important;
     color: var(--primary-content);
 }
+
 
 /* scrollbar stuff */
 body::-webkit-scrollbar,
 body::-webkit-scrollbar-track,
 body::-webkit-scrollbar-button,
 body::-webkit-scrollbar-track-piece,
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background-color: var(--background);
 }
- 
+
 body::-webkit-scrollbar-track {
     background-color: var(--background);
 }
- 
+
 body::-webkit-scrollbar-thumb {
     background-color: var(--background);
-  outline: 1px solid slategrey;
+    outline: 1px solid slategrey;
 }
+
+
+/* Dropdown lists */
+.aui-dropdown2.aui-style-default,
+.aui-dropdown2.aui-style-default a {
+    background-color: var(--background-highlights);
+    color: var(--primary-content);
+}
+
+.adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section a:hover:not([data-operation="color"]),
+.adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section li:hover :not([data-operation="color"]),
+.adg3 .aui-dropdown2.aui-style-default > ul > li a:hover:not([data-operation="color"]),
+.adg3 .aui-dropdown2.aui-style-default > ul > li li:hover :not([data-operation="color"]) {
+    background-color: var(--secondary-content);
+    color: var(--background-highlights);
+}
+
+.aui-dropdown2.aui-style-default:hover a {
+    background-color: var(--background-highlights);
+    color: var(--primary-content);
+}
+
+/** End Dropdown Lists **/
+
 
 /****************************************************************\
 /****************************************************************\
@@ -88,9 +123,11 @@ body::-webkit-scrollbar-thumb {
 .fBYwee {
     filter: invert(100%);
 }
+
 .eRZMHk {
     background-color: var(--background) !important;
 }
+
 #page-body,
 .issue-view,
 #issue-content,
@@ -99,13 +136,16 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--background) !important;
 }
 
+
 /** navigation expander add border on left so we know where to click */
 .eRZMHk {
     border-left: 1px solid var(--base3);
 }
+
 .eRZMHk:hover::before {
     background: var(--base3);
 }
+
 
 /* make expando button always visible  */
 .bgZnOn::before,
@@ -113,11 +153,13 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--base3);
     opacity: 1;
 }
+
 .bgZnOn::before,
 .bgZnOn::after {
     background-color: var(--base3);
     opacity: 0;
 }
+
 
 /******************
 *******************
@@ -132,10 +174,12 @@ body::-webkit-scrollbar-thumb {
 p {
     color: var(--primary-content) !important;
 }
+
 .adg3 .editable-field:hover,
 .adg3 .editable-field:hover > span {
     background-color: var(--background-highlights);
 }
+
 
 /**** Issue Pane ****/
 
@@ -143,41 +187,52 @@ p {
 .adg3 .aui-page-header #summary-val {
     color: var(--emphasized-content);
 }
+
 .toggle-title {
     color: var(--emphasized-content);
     background-color: var(--background) !important;
 }
+
 .aui-toolbar .toolbar-group .toolbar-trigger {
     background-color: var(--background-highlights) !important;
     color: var(--primary-content);
 }
+
 .aui-toolbar .toolbar-group .toolbar-trigger:hover {
     background-color: var(--background-highlights) !important;
     color: var(--emphasized-content);
 }
+
 #issuedetails {
     color: var(--primary-content);
 }
+
 #issuedetails > .item > .wrap > strong.name {
     color: var(--violet);
 }
+
 #customfieldmodule .item > .wrap > strong.name {
     color: var(--magenta);
 }
+
 #issuedetails a {
     color: var(--blue);
 }
+
 
 /** issue links / attachments / etc **/
 .adg3 #linkingmodule .links-list dd:hover {
     background-color: var(--background-highlights);
 }
+
 .issue-body-content .module > .mod-header .ops {
     background-color: var(--background-highlights);
 }
+
 .adg3 .mod-header ul.ops a {
     color: var(--primary-content);
 }
+
 .aui-button-subtle.aui-button:focus,
 .aui-button-subtle.aui-button:hover,
 .aui-button:focus,
@@ -187,48 +242,60 @@ p {
     color: var(--emphasized-content);
 }
 
+
 /**** Issue Activity ****/
 .adg3 .issue-data-block.focused,
 .adg3 .issue-data-block:hover {
     background-color: var(--background-highlights);
 }
+
 .action-details {
     color: var(--primary-content);
 }
+
 .action-details a {
     color: var(--blue);
 }
+
 .tabwrap > .tabs.horizontal > li.active > a,
 .tabwrap > .tabs.horizontal > li.active > strong {
     background-color: var(--background);
     color: var(--primary-content);
 }
+
 .adg3 .tabwrap > ul.tabs > li.active > strong {
     color: var(--magenta);
 }
+
 #issue-tabs li a {
     background-color: var(--background);
     color: var(--primary-content);
 }
+
 
 /** Right pane **/
 #assignee-val,
 #reporter-val {
     color: var(--primary-content);
 }
+
 #vote-toggle,
 #watching-toggle {
     color: var(--blue);
 }
+
 #devstatus-container a {
     color: var(--blue);
 }
+
 time {
     color: var(--primary-content) !important;
 }
+
 #greenhopper-agile-issue-web-panel a {
     color: var(--blue);
 }
+
 
 /** Edit modal **/
 #edit-issue-dialog.jira-dialog,
@@ -239,9 +306,11 @@ time {
     background-color: var(--background);
     color: var(--primary-content);
 }
+
 #edit-issue-dialog.jira-dialog {
     border: 1px solid var(--background-highlights);
 }
+
 .content .field-group .text,
 .content .field-group .select,
 .content .field-group .select option,
@@ -249,9 +318,10 @@ time {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
+
 .content .field-group .text:hover,
 .content .field-group .select:hover,
-.content .field-group .textarea:hover{
+.content .field-group .textarea:hover {
     background-color: var(--secondary-content);
     color: var(--primary-content);
 }
@@ -264,12 +334,20 @@ time {
 .adg3 .aui-button.aui-dropdown2-trigger {
     color: var(--primary-content);
 }
-.aui-button.aui-button-subtle, .aui-theme-default .aui-button.aui-button-subtle {
+
+.aui-button.aui-button-subtle,
+.aui-theme-default .aui-button.aui-button-subtle {
     color: var(--secondary-content);
 }
-.aui-button .aui-icon, .ops li .aui-icon {
+
+.aui-button .aui-icon,
+.ops li .aui-icon {
     color: inherit;
 }
-#create-issue-dialog .form-body, #create-issue-dialog .form-footer, #edit-issue-dialog .form-body, #edit-issue-dialog .form-footer {
-    background-color: var(--background);   
+
+#create-issue-dialog .form-body,
+#create-issue-dialog .form-footer,
+#edit-issue-dialog .form-body,
+#edit-issue-dialog .form-footer {
+    background-color: var(--background);
 }
