@@ -89,6 +89,10 @@ body::-webkit-scrollbar-thumb {
 
 
 /* Dropdown lists */
+form.aui input[type="text"] {
+    color: var(--primary-content);
+}
+
 .aui-dropdown2.aui-style-default,
 .aui-dropdown2.aui-style-default a {
     background-color: var(--background-highlights);
@@ -98,7 +102,11 @@ body::-webkit-scrollbar-thumb {
 .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section a:hover:not([data-operation="color"]),
 .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section li:hover :not([data-operation="color"]),
 .adg3 .aui-dropdown2.aui-style-default > ul > li a:hover:not([data-operation="color"]),
-.adg3 .aui-dropdown2.aui-style-default > ul > li li:hover :not([data-operation="color"]) {
+.adg3 .aui-dropdown2.aui-style-default > ul > li li:hover :not([data-operation="color"]),
+.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:hover,
+.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:focus,
+.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:hover,
+.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label.active {
     background-color: var(--secondary-content);
     color: var(--background-highlights);
 }
@@ -108,8 +116,12 @@ body::-webkit-scrollbar-thumb {
     color: var(--primary-content);
 }
 
-/** End Dropdown Lists **/
+.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label span {
+    color: var(--primary-content);
+}
 
+
+/** End Dropdown Lists **/
 
 /****************************************************************\
 /****************************************************************\
@@ -350,4 +362,71 @@ time {
 #edit-issue-dialog .form-body,
 #edit-issue-dialog .form-footer {
     background-color: var(--background);
+}
+
+
+/****************************************************************\
+/****************************************************************\
+/****************       Kanban Board       **********************\
+/****************************************************************\
+/****************************************************************/
+#content #subnav-title .subnavigator-title  {
+    color: var(--primary-content);    
+}
+
+#page,
+#page-body,
+#content,
+#gh,
+#ghx-content-main,
+#ghx-rabid,
+#ghx-work-wrapper,
+#ghx-work,
+#ghx-pool-column,
+#ghx-pool,
+#ghx-column-headers,
+.ghx-swimlane-header::after {
+    background-color: var(--background);
+    box-shadow: none;
+}
+
+.adg3 .ghx-column-headers .ghx-column,
+.adg3 .ghx-columns .ghx-column {
+    background-color: var(--background-highlights);
+}
+
+.ghx-issue {
+    background-color: var(--background) !important;
+}
+
+.ghx-issue * {
+    color: var(--primary-content) !important;
+}
+
+.ghx-issue:hover {
+    background-color: var(--background-highlights) !important;
+}
+
+.ghx-issue:hover * {
+    color: var(--primary-content) !important;
+}
+
+.ghx-issue:hover {
+    border: 1px solid var(--emphasized-content);
+}
+
+.ghx-swimlane-header,
+.ghx-swimlane-header-stalker,
+.ghx-column-header-group {
+    background-color: var(--background) !important;
+}
+
+.ghx-parent-group {
+    background-color: var(--background-highlights) !important;
+    color: var(--primary-content);
+    border: 1px solid var(--emphasized-content);
+}
+
+.ghx-group > .ghx-summary {
+    color: var(--secondary-content);
 }
