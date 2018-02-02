@@ -120,8 +120,19 @@ form.aui input[type="text"] {
     color: var(--primary-content);
 }
 
-
 /** End Dropdown Lists **/
+
+
+/** labels **/
+.labels, .labels li, .lozenge {
+    background-color: var(--background-highlights) !important;
+}
+.adg3 .ghx-editable:hover, .adg3 .ghx-editable::after, .adg3 .editable-field:hover, .adg3 .editable-field .overlay-icon.aui-iconfont-edit {
+    background-color: var(--background-highlights);
+}
+ul.labels li a.lozenge {
+       background-color: var(--background-highlights);
+}
 
 /****************************************************************\
 /****************************************************************\
@@ -385,6 +396,13 @@ time {
 #ghx-pool-column,
 #ghx-pool,
 #ghx-column-headers,
+#ghx-detail-view.ghx-detail-view #ghx-detail-contents.ghx-detail-contents,
+#ghx-detail-view.ghx-detail-view #ghx-detail-contents.ghx-detail-contents .ghx-detail-nav-menu,
+#js-detail-nav-content,
+#ghx-detail-head,
+#ghx-detail-issue,
+#ghx-detail-contents,
+#ghx-detail-view,
 .ghx-swimlane-header::after {
     background-color: var(--background);
     box-shadow: none;
@@ -429,4 +447,35 @@ time {
 
 .ghx-group > .ghx-summary {
     color: var(--secondary-content);
+}
+
+/** Detail **/
+#ghx-detail-contents {
+    border: none;
+}
+#ghx-detail-issue {
+    color: var(--primary-content);
+}
+#ghx-detail-issue a {
+    color: var(--blue);
+}
+#ghx-detail-issue .toggle-title {
+    color: var(--primary-content);
+}
+/* color sidebar in details view */
+.ghx-detail-nav-menu ul li.ghx-detail-nav-item,
+.ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected {
+    background-color: var(--background);
+    color: var(--primary-content);
+}
+
+/*recolor icons */
+.ghx-detail-nav-menu ul li.ghx-detail-nav-item span {
+    color: var(--primary-content);
+}
+
+/* color selected icon in sidebar in details view */
+.ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected a{
+    background-color: var(--background-highlights);
+    color: var(--primary-content);
 }
