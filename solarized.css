@@ -1,3 +1,19 @@
+/* ==UserStyle==
+@name Jira Solarized
+@description Modify new JIRA theme with Solarized Dark or Light
+@namespace atlassian.net
+@version 0.0.1
+@author snowe <tyler.b.thrailkill@gmail.com> (https://github.com/snowe2010)
+@homepageURL http://github.com/snowe2010/jira-solarized
+@supportURL http://github.com/snowe2010/jira-solarized/issues
+@license MIT
+@var select solarized 'Solarized Scheme' {
+    "Light": "light",
+    "Dark": "dark"
+}
+@preprocessor stylus
+==/UserStyle== */
+
 :root {
     --base03: #002b36;
     --base02: #073642;
@@ -16,21 +32,20 @@
     --cyan: #2aa198;
     --green: #859900;
     /* Dark mode */
+    /*
     --background: var(--base03);
     --background-highlights: var(--base02);
     --secondary-content: var(--base01);
     --primary-content: var(--base0);
     --emphasized-content: var(--base1);
+    */
     /* Light Mode */
-    /*
     --background: var(--base3);
     --background-highlights: var(--base2);
     --secondary-content: var(--base1);
     --primary-content: var(--base00);
     --emphasized-content: var(--base01);
-    */
 }
-
 
 /****************************************************************\
 /****************************************************************\
@@ -44,17 +59,14 @@ a.aui-button {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
-
 .aui-button-subtle.aui-button:hover .aui-theme-default .aui-button.aui-button-subtle:hover,
 .aui-button:hover {
     background-color: var(--secondary-content);
     color: var(--emphasized-content);
 }
-
 #navigation-app .iYJWvo {
     background-color: var(--background) !important;
 }
-
 
 /* keeps forms colored even on edit */
 form.aui .text,
@@ -68,7 +80,6 @@ form.aui .aui-select2-container {
     color: var(--primary-content);
 }
 
-
 /* scrollbar stuff */
 body::-webkit-scrollbar,
 body::-webkit-scrollbar-track,
@@ -77,28 +88,23 @@ body::-webkit-scrollbar-track-piece,
 body::-webkit-scrollbar-thumb {
     background-color: var(--background);
 }
-
 body::-webkit-scrollbar-track {
     background-color: var(--background);
 }
-
 body::-webkit-scrollbar-thumb {
     background-color: var(--background);
     outline: 1px solid slategrey;
 }
 
-
 /* Dropdown lists */
 form.aui input[type="text"] {
     color: var(--primary-content);
 }
-
 .aui-dropdown2.aui-style-default,
 .aui-dropdown2.aui-style-default a {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
-
 .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section a:hover:not([data-operation="color"]),
 .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section li:hover :not([data-operation="color"]),
 .adg3 .aui-dropdown2.aui-style-default > ul > li a:hover:not([data-operation="color"]),
@@ -110,28 +116,30 @@ form.aui input[type="text"] {
     background-color: var(--secondary-content);
     color: var(--background-highlights);
 }
-
 .aui-dropdown2.aui-style-default:hover a {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
-
 .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label span {
     color: var(--primary-content);
 }
 
 /** End Dropdown Lists **/
 
-
 /** labels **/
-.labels, .labels li, .lozenge {
+.labels,
+.labels li,
+.lozenge {
     background-color: var(--background-highlights) !important;
 }
-.adg3 .ghx-editable:hover, .adg3 .ghx-editable::after, .adg3 .editable-field:hover, .adg3 .editable-field .overlay-icon.aui-iconfont-edit {
+.adg3 .ghx-editable:hover,
+.adg3 .ghx-editable::after,
+.adg3 .editable-field:hover,
+.adg3 .editable-field .overlay-icon.aui-iconfont-edit {
     background-color: var(--background-highlights);
 }
 ul.labels li a.lozenge {
-       background-color: var(--background-highlights);
+    background-color: var(--background-highlights);
 }
 
 /****************************************************************\
@@ -144,13 +152,20 @@ ul.labels li a.lozenge {
 .fEymd,
 .ulFTM,
 .fBYwee {
-    filter: invert(100%);
+    color: var(--primary-content);
 }
-
+.fjtgrF:before,
+.fjtgrF:after {
+    background-color: var(--background);
+}
+.cHbijf:before,
+.cHbijf:after,
+.idPIJS {
+    background-color: var(--emphasized-content);
+}
 .eRZMHk {
     background-color: var(--background) !important;
 }
-
 #page-body,
 .issue-view,
 #issue-content,
@@ -159,30 +174,30 @@ ul.labels li a.lozenge {
     background-color: var(--background) !important;
 }
 
-
 /** navigation expander add border on left so we know where to click */
 .eRZMHk {
-    border-left: 1px solid var(--base3);
+    border-left: 1px solid var(--emphasized-content);
 }
-
 .eRZMHk:hover::before {
-    background: var(--base3);
+    background: var(--emphasized-content);
 }
-
 
 /* make expando button always visible  */
 .bgZnOn::before,
 .bgZnOn::after {
-    background-color: var(--base3);
+    background-color: var(--emphasized-content);
     opacity: 1;
 }
-
+.eRZMHk button:before,
+.eRZMHk button:after,
 .bgZnOn::before,
 .bgZnOn::after {
-    background-color: var(--base3);
-    opacity: 0;
+    color: var(--emphasized-content);
+    opacity: 1;
 }
-
+.cSCDWK {
+    background-color: var(--background);
+}
 
 /******************
 *******************
@@ -197,12 +212,10 @@ ul.labels li a.lozenge {
 p {
     color: var(--primary-content) !important;
 }
-
 .adg3 .editable-field:hover,
 .adg3 .editable-field:hover > span {
     background-color: var(--background-highlights);
 }
-
 
 /**** Issue Pane ****/
 
@@ -210,52 +223,46 @@ p {
 .adg3 .aui-page-header #summary-val {
     color: var(--emphasized-content);
 }
-
 .toggle-title {
     color: var(--emphasized-content);
     background-color: var(--background) !important;
 }
-
 .aui-toolbar .toolbar-group .toolbar-trigger {
     background-color: var(--background-highlights) !important;
     color: var(--primary-content);
 }
-
 .aui-toolbar .toolbar-group .toolbar-trigger:hover {
     background-color: var(--background-highlights) !important;
     color: var(--emphasized-content);
 }
-
 #issuedetails {
     color: var(--primary-content);
 }
-
 #issuedetails > .item > .wrap > strong.name {
     color: var(--violet);
 }
-
-#customfieldmodule .item > .wrap > strong.name {
+#customfieldmodule .item > .wrap {
     color: var(--magenta);
+    border-bottom-color: var(--magenta);
 }
-
+#comment-tabpanel > strong {
+    color: var(--magenta);
+    border-bottom-color: var(--magenta);
+}
 #issuedetails a {
     color: var(--blue);
 }
-
 
 /** issue links / attachments / etc **/
 .adg3 #linkingmodule .links-list dd:hover {
     background-color: var(--background-highlights);
 }
-
 .issue-body-content .module > .mod-header .ops {
     background-color: var(--background-highlights);
 }
-
 .adg3 .mod-header ul.ops a {
     color: var(--primary-content);
 }
-
 .aui-button-subtle.aui-button:focus,
 .aui-button-subtle.aui-button:hover,
 .aui-button:focus,
@@ -265,60 +272,51 @@ p {
     color: var(--emphasized-content);
 }
 
-
 /**** Issue Activity ****/
 .adg3 .issue-data-block.focused,
 .adg3 .issue-data-block:hover {
     background-color: var(--background-highlights);
 }
-
 .action-details {
     color: var(--primary-content);
 }
-
 .action-details a {
     color: var(--blue);
 }
-
 .tabwrap > .tabs.horizontal > li.active > a,
 .tabwrap > .tabs.horizontal > li.active > strong {
     background-color: var(--background);
     color: var(--primary-content);
 }
-
 .adg3 .tabwrap > ul.tabs > li.active > strong {
     color: var(--magenta);
 }
-
 #issue-tabs li a {
     background-color: var(--background);
     color: var(--primary-content);
 }
-
+#issue-tabs {
+    border-bottom-color: var(--secondary-content);
+}
 
 /** Right pane **/
 #assignee-val,
 #reporter-val {
     color: var(--primary-content);
 }
-
 #vote-toggle,
 #watching-toggle {
     color: var(--blue);
 }
-
 #devstatus-container a {
     color: var(--blue);
 }
-
 time {
     color: var(--primary-content) !important;
 }
-
 #greenhopper-agile-issue-web-panel a {
     color: var(--blue);
 }
-
 
 /** Edit modal **/
 #edit-issue-dialog.jira-dialog,
@@ -329,11 +327,9 @@ time {
     background-color: var(--background);
     color: var(--primary-content);
 }
-
 #edit-issue-dialog.jira-dialog {
     border: 1px solid var(--background-highlights);
 }
-
 .content .field-group .text,
 .content .field-group .select,
 .content .field-group .select option,
@@ -341,33 +337,27 @@ time {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
-
 .content .field-group .text:hover,
 .content .field-group .select:hover,
 .content .field-group .textarea:hover {
     background-color: var(--secondary-content);
     color: var(--primary-content);
 }
-
 .jira-wikifield .wiki-edit-toolbar {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
-
 .adg3 .aui-button.aui-dropdown2-trigger {
     color: var(--primary-content);
 }
-
 .aui-button.aui-button-subtle,
 .aui-theme-default .aui-button.aui-button-subtle {
     color: var(--secondary-content);
 }
-
 .aui-button .aui-icon,
 .ops li .aui-icon {
-    color: inherit;
+    color: var(--primary-content);
 }
-
 #create-issue-dialog .form-body,
 #create-issue-dialog .form-footer,
 #edit-issue-dialog .form-body,
@@ -375,16 +365,14 @@ time {
     background-color: var(--background);
 }
 
-
 /****************************************************************\
 /****************************************************************\
 /****************       Kanban Board       **********************\
 /****************************************************************\
 /****************************************************************/
-#content #subnav-title .subnavigator-title  {
-    color: var(--primary-content);    
+#content #subnav-title .subnavigator-title {
+    color: var(--primary-content);
 }
-
 #page,
 #page-body,
 #content,
@@ -407,44 +395,35 @@ time {
     background-color: var(--background);
     box-shadow: none;
 }
-
 .adg3 .ghx-column-headers .ghx-column,
 .adg3 .ghx-columns .ghx-column {
     background-color: var(--background-highlights);
 }
-
 .ghx-issue {
     background-color: var(--background) !important;
 }
-
 .ghx-issue * {
     color: var(--primary-content) !important;
 }
-
 .ghx-issue:hover {
     background-color: var(--background-highlights) !important;
 }
-
 .ghx-issue:hover * {
     color: var(--primary-content) !important;
 }
-
 .ghx-issue:hover {
     border: 1px solid var(--emphasized-content);
 }
-
 .ghx-swimlane-header,
 .ghx-swimlane-header-stalker,
 .ghx-column-header-group {
     background-color: var(--background) !important;
 }
-
 .ghx-parent-group {
     background-color: var(--background-highlights) !important;
     color: var(--primary-content);
     border: 1px solid var(--emphasized-content);
 }
-
 .ghx-group > .ghx-summary {
     color: var(--secondary-content);
 }
@@ -462,6 +441,7 @@ time {
 #ghx-detail-issue .toggle-title {
     color: var(--primary-content);
 }
+
 /* color sidebar in details view */
 .ghx-detail-nav-menu ul li.ghx-detail-nav-item,
 .ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected {
@@ -475,7 +455,66 @@ time {
 }
 
 /* color selected icon in sidebar in details view */
-.ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected a{
+.ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected a {
     background-color: var(--background-highlights);
     color: var(--primary-content);
 }
+
+/** Open issues page **/
+#page #page-body #content .aui-page-panel {
+    background-color: var(--background);
+    color: var(--primary-content);
+}
+
+/* Fix this later
+#page #page-body #content .aui-page-panel a {
+    background-color: var(--background);
+    color: var(--blue);
+}
+*/
+.subnavigator-title {
+    color: var(--primary-content) !important;
+}
+
+/* Search nav pane */
+.LnFvQ {
+    background-color: var(--background-highlights) !important;
+}
+.LnFvQ span {
+    color: var(--secondary-content);
+}
+.ipIHid {
+    background-color: var(--background-highlights) !important;
+}
+.ewvMIF,
+.kNFuQa {
+    background-color: transparent;
+}
+body #page #page-body h1,
+body #page #page-body h2,
+body #page #page-body h3,
+body #page #page-body h4,
+body #page #page-body h5,
+body #page #page-body h6 {
+    color: var(--primary-content) !important;
+}
+
+/******** Backlog ***************/
+#ghx-backlog,
+.ghx-backlog-container {
+    background-color: var(--background);
+}
+.ghx-issue-compact,
+.ghx-issue-compact .ghx-end {
+    background-color: var(--background);
+}
+.adg3 .js-issue.ghx-issue-compact:hover,
+.adg3 .js-issue.ghx-issue-compact:hover .ghx-items-container {
+    background-color: var(--background-highlights);
+}
+.adg3 .js-issue.ghx-selected,
+.adg3 .js-issue.ghx-selected .ghx-items-container {
+       background-color: var(--background-highlights);
+}
+
+
