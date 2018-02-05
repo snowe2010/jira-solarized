@@ -14,507 +14,508 @@
 @preprocessor stylus
 ==/UserStyle== */
 
-:root {
-    --base03: #002b36;
-    --base02: #073642;
-    --base01: #586e75;
-    --base00: #657b83;
-    --base0: #839496;
-    --base1: #93a1a1;
-    --base2: #eee8d5;
-    --base3: #fdf6e3;
-    --yellow: #b58900;
-    --orange: #cb4b16;
-    --red: #dc322f;
-    --magenta: #d33682;
-    --violet: #6c71c4;
-    --blue: #268bd2;
-    --cyan: #2aa198;
-    --green: #859900;
+@-moz-document regexp("^https?://promontech.atlassian.net/secure.*") {
+  :root {
+    base03: #002b36;
+    base02: #073642;
+    base01: #586e75;
+    base00: #657b83;
+    base0: #839496;
+    base1: #93a1a1;
+    base2: #eee8d5;
+    base3: #fdf6e3;
+    yellow: #b58900;
+    orange: #cb4b16;
+    red: #dc322f;
+    magenta: #d33682;
+    violet: #6c71c4;
+    blue: #268bd2;
+    cyan: #2aa198;
+    green: #859900;
     /* Dark mode */
     /*
-    --background: var(--base03);
-    --background-highlights: var(--base02);
-    --secondary-content: var(--base01);
-    --primary-content: var(--base0);
-    --emphasized-content: var(--base1);
+    background: base03;
+    background-highlights: base02;
+    secondary-content: base01;
+    primary-content: base0;
+    emphasized-content: base1;
     */
     /* Light Mode */
-    --background: var(--base3);
-    --background-highlights: var(--base2);
-    --secondary-content: var(--base1);
-    --primary-content: var(--base00);
-    --emphasized-content: var(--base01);
-}
+    background: base3;
+    background-highlights: base2;
+    secondary-content: base1;
+    primary-content: base00;
+    emphasized-content: base01;
+  }
 
-/****************************************************************\
-/****************************************************************\
-/****************       Global things      **********************\
-/****************************************************************\
-/****************************************************************\
-*/
-.aui-button,
-.aui-button:visited,
-a.aui-button {
-    background-color: var(--background-highlights);
-    color: var(--primary-content);
-}
-.aui-button-subtle.aui-button:hover .aui-theme-default .aui-button.aui-button-subtle:hover,
-.aui-button:hover {
-    background-color: var(--secondary-content);
-    color: var(--emphasized-content);
-}
-#navigation-app .iYJWvo {
-    background-color: var(--background) !important;
-}
+  /****************************************************************\
+  /****************************************************************\
+  /****************       Global things      **********************\
+  /****************************************************************\
+  /****************************************************************\
+  */
+  .aui-button,
+  .aui-button:visited,
+  a.aui-button {
+    background-color: background-highlights;
+    color: primary-content;
+  }
+  .aui-button-subtle.aui-button:hover .aui-theme-default .aui-button.aui-button-subtle:hover,
+  .aui-button:hover {
+    background-color: secondary-content;
+    color: emphasized-content;
+  }
+  #navigation-app .iYJWvo {
+    background-color: background !important;
+  }
 
-/* keeps forms colored even on edit */
-form.aui .text,
-form.aui .password,
-form.aui .upfile,
-form.aui .textarea,
-form.aui .select,
-form.aui .multi-select,
-form.aui .aui-select2-container {
-    background-color: var(--background-highlights) !important;
-    color: var(--primary-content);
-}
+  /* keeps forms colored even on edit */
+  form.aui .text,
+  form.aui .password,
+  form.aui .upfile,
+  form.aui .textarea,
+  form.aui .select,
+  form.aui .multi-select,
+  form.aui .aui-select2-container {
+    background-color: background-highlights !important;
+    color: primary-content;
+  }
 
-/* scrollbar stuff */
-body::-webkit-scrollbar,
-body::-webkit-scrollbar-track,
-body::-webkit-scrollbar-button,
-body::-webkit-scrollbar-track-piece,
-body::-webkit-scrollbar-thumb {
-    background-color: var(--background);
-}
-body::-webkit-scrollbar-track {
-    background-color: var(--background);
-}
-body::-webkit-scrollbar-thumb {
-    background-color: var(--background);
+  /* scrollbar stuff */
+  body::-webkit-scrollbar,
+  body::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-button,
+  body::-webkit-scrollbar-track-piece,
+  body::-webkit-scrollbar-thumb {
+    background-color: background;
+  }
+  body::-webkit-scrollbar-track {
+    background-color: background;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: background;
     outline: 1px solid slategrey;
-}
+  }
 
-/* Dropdown lists */
-form.aui input[type="text"] {
-    color: var(--primary-content);
-}
-.aui-dropdown2.aui-style-default,
-.aui-dropdown2.aui-style-default a {
-    background-color: var(--background-highlights);
-    color: var(--primary-content);
-}
-.adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section a:hover:not([data-operation="color"]),
-.adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section li:hover :not([data-operation="color"]),
-.adg3 .aui-dropdown2.aui-style-default > ul > li a:hover:not([data-operation="color"]),
-.adg3 .aui-dropdown2.aui-style-default > ul > li li:hover :not([data-operation="color"]),
-.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:hover,
-.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:focus,
-.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:hover,
-.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label.active {
-    background-color: var(--secondary-content);
-    color: var(--background-highlights);
-}
-.aui-dropdown2.aui-style-default:hover a {
-    background-color: var(--background-highlights);
-    color: var(--primary-content);
-}
-.aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label span {
-    color: var(--primary-content);
-}
+  /* Dropdown lists */
+  form.aui input[type="text"] {
+    color: primary-content;
+  }
+  .aui-dropdown2.aui-style-default,
+  .aui-dropdown2.aui-style-default a {
+    background-color: background-highlights;
+    color: primary-content;
+  }
+  .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section a:hover:not([data-operation="color"]),
+  .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section li:hover :not([data-operation="color"]),
+  .adg3 .aui-dropdown2.aui-style-default > ul > li a:hover:not([data-operation="color"]),
+  .adg3 .aui-dropdown2.aui-style-default > ul > li li:hover :not([data-operation="color"]),
+  .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:hover,
+  .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:focus,
+  .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:hover,
+  .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label.active {
+    background-color: secondary-content;
+    color: background-highlights;
+  }
+  .aui-dropdown2.aui-style-default:hover a {
+    background-color: background-highlights;
+    color: primary-content;
+  }
+  .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label span {
+    color: primary-content;
+  }
 
-/** End Dropdown Lists **/
+  /** End Dropdown Lists **/
 
-/** labels **/
-.labels,
-.labels li,
-.lozenge {
-    background-color: var(--background-highlights) !important;
-}
-.adg3 .ghx-editable:hover,
-.adg3 .ghx-editable::after,
-.adg3 .editable-field:hover,
-.adg3 .editable-field .overlay-icon.aui-iconfont-edit {
-    background-color: var(--background-highlights);
-}
-ul.labels li a.lozenge {
-    background-color: var(--background-highlights);
-}
+  /** labels **/
+  .labels,
+  .labels li,
+  .lozenge {
+    background-color: background-highlights !important;
+  }
+  .adg3 .ghx-editable:hover,
+  .adg3 .ghx-editable::after,
+  .adg3 .editable-field:hover,
+  .adg3 .editable-field .overlay-icon.aui-iconfont-edit {
+    background-color: background-highlights;
+  }
+  ul.labels li a.lozenge {
+    background-color: background-highlights;
+  }
 
-/****************************************************************\
-/****************************************************************\
-/****************       Navigation bar     **********************\
-/****************************************************************\
-/****************************************************************\
+  /****************************************************************\
+  /****************************************************************\
+  /****************       Navigation bar     **********************\
+  /****************************************************************\
+  /****************************************************************\
 
-/* Reverse colors in navigation-app drawer */
-.fEymd,
-.ulFTM,
-.fBYwee {
-    color: var(--primary-content);
-}
-.fjtgrF:before,
-.fjtgrF:after {
-    background-color: var(--background);
-}
-.cHbijf:before,
-.cHbijf:after,
-.idPIJS {
-    background-color: var(--emphasized-content);
-}
-.eRZMHk {
-    background-color: var(--background) !important;
-}
-#page-body,
-.issue-view,
-#issue-content,
-.issue-header-content,
-.command-bar {
-    background-color: var(--background) !important;
-}
+  /* Reverse colors in navigation-app drawer */
+  .fEymd,
+  .ulFTM,
+  .fBYwee {
+    color: primary-content;
+  }
+  .fjtgrF:before,
+  .fjtgrF:after {
+    background-color: background;
+  }
+  .cHbijf:before,
+  .cHbijf:after,
+  .idPIJS {
+    background-color: emphasized-content;
+  }
+  .eRZMHk {
+    background-color: background !important;
+  }
+  #page-body,
+  .issue-view,
+  #issue-content,
+  .issue-header-content,
+  .command-bar {
+    background-color: background !important;
+  }
 
-/** navigation expander add border on left so we know where to click */
-.eRZMHk {
-    border-left: 1px solid var(--emphasized-content);
-}
-.eRZMHk:hover::before {
-    background: var(--emphasized-content);
-}
+  /** navigation expander add border on left so we know where to click */
+  .eRZMHk {
+    border-left: 1px solid emphasized-content;
+  }
+  .eRZMHk:hover::before {
+    background: emphasized-content;
+  }
 
-/* make expando button always visible  */
-.bgZnOn::before,
-.bgZnOn::after {
-    background-color: var(--emphasized-content);
+  /* make expando button always visible  */
+  .bgZnOn::before,
+  .bgZnOn::after {
+    background-color: emphasized-content;
     opacity: 1;
-}
-.eRZMHk button:before,
-.eRZMHk button:after,
-.bgZnOn::before,
-.bgZnOn::after {
-    color: var(--emphasized-content);
+  }
+  .eRZMHk button:before,
+  .eRZMHk button:after,
+  .bgZnOn::before,
+  .bgZnOn::after {
+    color: emphasized-content;
     opacity: 1;
-}
-.cSCDWK {
-    background-color: var(--background);
-}
+  }
+  .cSCDWK {
+    background-color: background;
+  }
 
-/******************
-*******************
-    Issue Page
-*******************
-******************/
+  /******************
+  *******************
+      Issue Page
+  *******************
+  ******************/
 
-/**** General ****/
+  /**** General ****/
 
-/* make text readable */
-.user-content-block,
-p {
-    color: var(--primary-content) !important;
-}
-.adg3 .editable-field:hover,
-.adg3 .editable-field:hover > span {
-    background-color: var(--background-highlights);
-}
+  /* make text readable */
+  .user-content-block,
+  p {
+    color: primary-content !important;
+  }
+  .adg3 .editable-field:hover,
+  .adg3 .editable-field:hover > span {
+    background-color: background-highlights;
+  }
 
-/**** Issue Pane ****/
+  /**** Issue Pane ****/
 
-/* Issue Summary / Title */
-.adg3 .aui-page-header #summary-val {
-    color: var(--emphasized-content);
-}
-.toggle-title {
-    color: var(--emphasized-content);
-    background-color: var(--background) !important;
-}
-.aui-toolbar .toolbar-group .toolbar-trigger {
-    background-color: var(--background-highlights) !important;
-    color: var(--primary-content);
-}
-.aui-toolbar .toolbar-group .toolbar-trigger:hover {
-    background-color: var(--background-highlights) !important;
-    color: var(--emphasized-content);
-}
-#issuedetails {
-    color: var(--primary-content);
-}
-#issuedetails > .item > .wrap > strong.name {
-    color: var(--violet);
-}
-#customfieldmodule .item > .wrap {
-    color: var(--magenta);
-    border-bottom-color: var(--magenta);
-}
-#comment-tabpanel > strong {
-    color: var(--magenta);
-    border-bottom-color: var(--magenta);
-}
-#issuedetails a {
-    color: var(--blue);
-}
+  /* Issue Summary / Title */
+  .adg3 .aui-page-header #summary-val {
+    color: emphasized-content;
+  }
+  .toggle-title {
+    color: emphasized-content;
+    background-color: background !important;
+  }
+  .aui-toolbar .toolbar-group .toolbar-trigger {
+    background-color: background-highlights !important;
+    color: primary-content;
+  }
+  .aui-toolbar .toolbar-group .toolbar-trigger:hover {
+    background-color: background-highlights !important;
+    color: emphasized-content;
+  }
+  #issuedetails {
+    color: primary-content;
+  }
+  #issuedetails > .item > .wrap > strong.name {
+    color: violet;
+  }
+  #customfieldmodule .item > .wrap {
+    color: magenta;
+    border-bottom-color: magenta;
+  }
+  #comment-tabpanel > strong {
+    color: magenta;
+    border-bottom-color: magenta;
+  }
+  #issuedetails a {
+    color: blue;
+  }
 
-/** issue links / attachments / etc **/
-.adg3 #linkingmodule .links-list dd:hover {
-    background-color: var(--background-highlights);
-}
-.issue-body-content .module > .mod-header .ops {
-    background-color: var(--background-highlights);
-}
-.adg3 .mod-header ul.ops a {
-    color: var(--primary-content);
-}
-.aui-button-subtle.aui-button:focus,
-.aui-button-subtle.aui-button:hover,
-.aui-button:focus,
-.aui-button:hover,
-.aui-theme-default .aui-button.aui-button-subtle:focus,
-.aui-theme-default .aui-button.aui-button-subtle:hover {
-    color: var(--emphasized-content);
-}
+  /** issue links / attachments / etc **/
+  .adg3 #linkingmodule .links-list dd:hover {
+    background-color: background-highlights;
+  }
+  .issue-body-content .module > .mod-header .ops {
+    background-color: background-highlights;
+  }
+  .adg3 .mod-header ul.ops a {
+    color: primary-content;
+  }
+  .aui-button-subtle.aui-button:focus,
+  .aui-button-subtle.aui-button:hover,
+  .aui-button:focus,
+  .aui-button:hover,
+  .aui-theme-default .aui-button.aui-button-subtle:focus,
+  .aui-theme-default .aui-button.aui-button-subtle:hover {
+    color: emphasized-content;
+  }
 
-/**** Issue Activity ****/
-.adg3 .issue-data-block.focused,
-.adg3 .issue-data-block:hover {
-    background-color: var(--background-highlights);
-}
-.action-details {
-    color: var(--primary-content);
-}
-.action-details a {
-    color: var(--blue);
-}
-.tabwrap > .tabs.horizontal > li.active > a,
-.tabwrap > .tabs.horizontal > li.active > strong {
-    background-color: var(--background);
-    color: var(--primary-content);
-}
-.adg3 .tabwrap > ul.tabs > li.active > strong {
-    color: var(--magenta);
-}
-#issue-tabs li a {
-    background-color: var(--background);
-    color: var(--primary-content);
-}
-#issue-tabs {
-    border-bottom-color: var(--secondary-content);
-}
+  /**** Issue Activity ****/
+  .adg3 .issue-data-block.focused,
+  .adg3 .issue-data-block:hover {
+    background-color: background-highlights;
+  }
+  .action-details {
+    color: primary-content;
+  }
+  .action-details a {
+    color: blue;
+  }
+  .tabwrap > .tabs.horizontal > li.active > a,
+  .tabwrap > .tabs.horizontal > li.active > strong {
+    background-color: background;
+    color: primary-content;
+  }
+  .adg3 .tabwrap > ul.tabs > li.active > strong {
+    color: magenta;
+  }
+  #issue-tabs li a {
+    background-color: background;
+    color: primary-content;
+  }
+  #issue-tabs {
+    border-bottom-color: secondary-content;
+  }
 
-/** Right pane **/
-#assignee-val,
-#reporter-val {
-    color: var(--primary-content);
-}
-#vote-toggle,
-#watching-toggle {
-    color: var(--blue);
-}
-#devstatus-container a {
-    color: var(--blue);
-}
-time {
-    color: var(--primary-content) !important;
-}
-#greenhopper-agile-issue-web-panel a {
-    color: var(--blue);
-}
+  /** Right pane **/
+  #assignee-val,
+  #reporter-val {
+    color: primary-content;
+  }
+  #vote-toggle,
+  #watching-toggle {
+    color: blue;
+  }
+  #devstatus-container a {
+    color: blue;
+  }
+  time {
+    color: primary-content !important;
+  }
+  #greenhopper-agile-issue-web-panel a {
+    color: blue;
+  }
 
-/** Edit modal **/
-#edit-issue-dialog.jira-dialog,
-#create-issue-dialog .jira-dialog-heading,
-#edit-issue-dialog .jira-dialog-heading,
-#edit-issue-dialog .jira-dialog-heading h2,
-#edit-issue-dialog .jira-dialog-content .form-body {
-    background-color: var(--background);
-    color: var(--primary-content);
-}
-#edit-issue-dialog.jira-dialog {
-    border: 1px solid var(--background-highlights);
-}
-.content .field-group .text,
-.content .field-group .select,
-.content .field-group .select option,
-.content .field-group .textarea {
-    background-color: var(--background-highlights);
-    color: var(--primary-content);
-}
-.content .field-group .text:hover,
-.content .field-group .select:hover,
-.content .field-group .textarea:hover {
-    background-color: var(--secondary-content);
-    color: var(--primary-content);
-}
-.jira-wikifield .wiki-edit-toolbar {
-    background-color: var(--background-highlights);
-    color: var(--primary-content);
-}
-.adg3 .aui-button.aui-dropdown2-trigger {
-    color: var(--primary-content);
-}
-.aui-button.aui-button-subtle,
-.aui-theme-default .aui-button.aui-button-subtle {
-    color: var(--secondary-content);
-}
-.aui-button .aui-icon,
-.ops li .aui-icon {
-    color: var(--primary-content);
-}
-#create-issue-dialog .form-body,
-#create-issue-dialog .form-footer,
-#edit-issue-dialog .form-body,
-#edit-issue-dialog .form-footer {
-    background-color: var(--background);
-}
+  /** Edit modal **/
+  #edit-issue-dialog.jira-dialog,
+  #create-issue-dialog .jira-dialog-heading,
+  #edit-issue-dialog .jira-dialog-heading,
+  #edit-issue-dialog .jira-dialog-heading h2,
+  #edit-issue-dialog .jira-dialog-content .form-body {
+    background-color: background;
+    color: primary-content;
+  }
+  #edit-issue-dialog.jira-dialog {
+    border: 1px solid background-highlights;
+  }
+  .content .field-group .text,
+  .content .field-group .select,
+  .content .field-group .select option,
+  .content .field-group .textarea {
+    background-color: background-highlights;
+    color: primary-content;
+  }
+  .content .field-group .text:hover,
+  .content .field-group .select:hover,
+  .content .field-group .textarea:hover {
+    background-color: secondary-content;
+    color: primary-content;
+  }
+  .jira-wikifield .wiki-edit-toolbar {
+    background-color: background-highlights;
+    color: primary-content;
+  }
+  .adg3 .aui-button.aui-dropdown2-trigger {
+    color: primary-content;
+  }
+  .aui-button.aui-button-subtle,
+  .aui-theme-default .aui-button.aui-button-subtle {
+    color: secondary-content;
+  }
+  .aui-button .aui-icon,
+  .ops li .aui-icon {
+    color: primary-content;
+  }
+  #create-issue-dialog .form-body,
+  #create-issue-dialog .form-footer,
+  #edit-issue-dialog .form-body,
+  #edit-issue-dialog .form-footer {
+    background-color: background;
+  }
 
-/****************************************************************\
-/****************************************************************\
-/****************       Kanban Board       **********************\
-/****************************************************************\
-/****************************************************************/
-#content #subnav-title .subnavigator-title {
-    color: var(--primary-content);
-}
-#page,
-#page-body,
-#content,
-#gh,
-#ghx-content-main,
-#ghx-rabid,
-#ghx-work-wrapper,
-#ghx-work,
-#ghx-pool-column,
-#ghx-pool,
-#ghx-column-headers,
-#ghx-detail-view.ghx-detail-view #ghx-detail-contents.ghx-detail-contents,
-#ghx-detail-view.ghx-detail-view #ghx-detail-contents.ghx-detail-contents .ghx-detail-nav-menu,
-#js-detail-nav-content,
-#ghx-detail-head,
-#ghx-detail-issue,
-#ghx-detail-contents,
-#ghx-detail-view,
-.ghx-swimlane-header::after {
-    background-color: var(--background);
+  /****************************************************************\
+  /****************************************************************\
+  /****************       Kanban Board       **********************\
+  /****************************************************************\
+  /****************************************************************/
+  #content #subnav-title .subnavigator-title {
+    color: primary-content;
+  }
+  #page,
+  #page-body,
+  #content,
+  #gh,
+  #ghx-content-main,
+  #ghx-rabid,
+  #ghx-work-wrapper,
+  #ghx-work,
+  #ghx-pool-column,
+  #ghx-pool,
+  #ghx-column-headers,
+  #ghx-detail-view.ghx-detail-view #ghx-detail-contents.ghx-detail-contents,
+  #ghx-detail-view.ghx-detail-view #ghx-detail-contents.ghx-detail-contents .ghx-detail-nav-menu,
+  #js-detail-nav-content,
+  #ghx-detail-head,
+  #ghx-detail-issue,
+  #ghx-detail-contents,
+  #ghx-detail-view,
+  .ghx-swimlane-header::after {
+    background-color: background;
     box-shadow: none;
-}
-.adg3 .ghx-column-headers .ghx-column,
-.adg3 .ghx-columns .ghx-column {
-    background-color: var(--background-highlights);
-}
-.ghx-issue {
-    background-color: var(--background) !important;
-}
-.ghx-issue * {
-    color: var(--primary-content) !important;
-}
-.ghx-issue:hover {
-    background-color: var(--background-highlights) !important;
-}
-.ghx-issue:hover * {
-    color: var(--primary-content) !important;
-}
-.ghx-issue:hover {
-    border: 1px solid var(--emphasized-content);
-}
-.ghx-swimlane-header,
-.ghx-swimlane-header-stalker,
-.ghx-column-header-group {
-    background-color: var(--background) !important;
-}
-.ghx-parent-group {
-    background-color: var(--background-highlights) !important;
-    color: var(--primary-content);
-    border: 1px solid var(--emphasized-content);
-}
-.ghx-group > .ghx-summary {
-    color: var(--secondary-content);
-}
+  }
+  .adg3 .ghx-column-headers .ghx-column,
+  .adg3 .ghx-columns .ghx-column {
+    background-color: background-highlights;
+  }
+  .ghx-issue {
+    background-color: background !important;
+  }
+  .ghx-issue * {
+    color: primary-content !important;
+  }
+  .ghx-issue:hover {
+    background-color: background-highlights !important;
+  }
+  .ghx-issue:hover * {
+    color: primary-content !important;
+  }
+  .ghx-issue:hover {
+    border: 1px solid emphasized-content;
+  }
+  .ghx-swimlane-header,
+  .ghx-swimlane-header-stalker,
+  .ghx-column-header-group {
+    background-color: background !important;
+  }
+  .ghx-parent-group {
+    background-color: background-highlights !important;
+    color: primary-content;
+    border: 1px solid emphasized-content;
+  }
+  .ghx-group > .ghx-summary {
+    color: secondary-content;
+  }
 
-/** Detail **/
-#ghx-detail-contents {
+  /** Detail **/
+  #ghx-detail-contents {
     border: none;
-}
-#ghx-detail-issue {
-    color: var(--primary-content);
-}
-#ghx-detail-issue a {
-    color: var(--blue);
-}
-#ghx-detail-issue .toggle-title {
-    color: var(--primary-content);
-}
+  }
+  #ghx-detail-issue {
+    color: primary-content;
+  }
+  #ghx-detail-issue a {
+    color: blue;
+  }
+  #ghx-detail-issue .toggle-title {
+    color: primary-content;
+  }
 
-/* color sidebar in details view */
-.ghx-detail-nav-menu ul li.ghx-detail-nav-item,
-.ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected {
-    background-color: var(--background);
-    color: var(--primary-content);
-}
+  /* color sidebar in details view */
+  .ghx-detail-nav-menu ul li.ghx-detail-nav-item,
+  .ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected {
+    background-color: background;
+    color: primary-content;
+  }
 
-/*recolor icons */
-.ghx-detail-nav-menu ul li.ghx-detail-nav-item span {
-    color: var(--primary-content);
-}
+  /*recolor icons */
+  .ghx-detail-nav-menu ul li.ghx-detail-nav-item span {
+    color: primary-content;
+  }
 
-/* color selected icon in sidebar in details view */
-.ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected a {
-    background-color: var(--background-highlights);
-    color: var(--primary-content);
-}
+  /* color selected icon in sidebar in details view */
+  .ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected a {
+    background-color: background-highlights;
+    color: primary-content;
+  }
 
-/** Open issues page **/
-#page #page-body #content .aui-page-panel {
-    background-color: var(--background);
-    color: var(--primary-content);
-}
+  /** Open issues page **/
+  #page #page-body #content .aui-page-panel {
+    background-color: background;
+    color: primary-content;
+  }
 
-/* Fix this later
-#page #page-body #content .aui-page-panel a {
-    background-color: var(--background);
-    color: var(--blue);
-}
-*/
-.subnavigator-title {
-    color: var(--primary-content) !important;
-}
+  /* Fix this later
+  #page #page-body #content .aui-page-panel a {
+      background-color: background;
+      color: blue;
+  }
+  */
+  .subnavigator-title {
+    color: primary-content !important;
+  }
 
-/* Search nav pane */
-.LnFvQ {
-    background-color: var(--background-highlights) !important;
-}
-.LnFvQ span {
-    color: var(--secondary-content);
-}
-.ipIHid {
-    background-color: var(--background-highlights) !important;
-}
-.ewvMIF,
-.kNFuQa {
+  /* Search nav pane */
+  .LnFvQ {
+    background-color: background-highlights !important;
+  }
+  .LnFvQ span {
+    color: secondary-content;
+  }
+  .ipIHid {
+    background-color: background-highlights !important;
+  }
+  .ewvMIF,
+  .kNFuQa {
     background-color: transparent;
-}
-body #page #page-body h1,
-body #page #page-body h2,
-body #page #page-body h3,
-body #page #page-body h4,
-body #page #page-body h5,
-body #page #page-body h6 {
-    color: var(--primary-content) !important;
-}
+  }
+  body #page #page-body h1,
+  body #page #page-body h2,
+  body #page #page-body h3,
+  body #page #page-body h4,
+  body #page #page-body h5,
+  body #page #page-body h6 {
+    color: primary-content !important;
+  }
 
-/******** Backlog ***************/
-#ghx-backlog,
-.ghx-backlog-container {
-    background-color: var(--background);
-}
-.ghx-issue-compact,
-.ghx-issue-compact .ghx-end {
-    background-color: var(--background);
-}
-.adg3 .js-issue.ghx-issue-compact:hover,
-.adg3 .js-issue.ghx-issue-compact:hover .ghx-items-container {
-    background-color: var(--background-highlights);
-}
-.adg3 .js-issue.ghx-selected,
-.adg3 .js-issue.ghx-selected .ghx-items-container {
-       background-color: var(--background-highlights);
-}
+  /******** Backlog ***************/
+  #ghx-backlog,
+  .ghx-backlog-container {
+    background-color: background;
+  }
+  .ghx-issue-compact,
+  .ghx-issue-compact .ghx-end {
+    background-color: background;
+  }
+  .adg3 .js-issue.ghx-issue-compact:hover,
+  .adg3 .js-issue.ghx-issue-compact:hover .ghx-items-container {
+    background-color: background-highlights;
+  }
+  .adg3 .js-issue.ghx-selected,
+  .adg3 .js-issue.ghx-selected .ghx-items-container {
+   background-color: background-highlights;
+ }
 
-
+}
