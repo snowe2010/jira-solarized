@@ -14,42 +14,37 @@
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document regexp("^https?://(.*?).atlassian.net/(secure|browse|plugins).*")
-  base3 = #fdf6e3
-  base03 = #002b36
-  background = base3
-  :root {
-      --base03: #002b36;
-      --base02: #073642;
-      --base01: #586e75;
-      --base00: #657b83;
-      --base0: #839496;
-      --base1: #93a1a1;
-      --base2: #eee8d5;
-      --base3: #fdf6e3;
-      --yellow: #b58900;
-      --orange: #cb4b16;
-      --red: #dc322f;
-      --magenta: #d33682;
-      --violet: #6c71c4;
-      --blue: #268bd2;
-      --cyan: #2aa198;
-      --green: #859900;
-      /* Dark mode */
-      /*
-      --background: var(--base03);
-      --background-highlights: var(--base02);
-      --secondary-content: var(--base01);
-      --primary-content: var(--base0);
-      --emphasized-content: var(--base1);
-      */
-      /* Light Mode */
-      --background: var(--base3);
-      --background-highlights: var(--base2);
-      --secondary-content: var(--base1);
-      --primary-content: var(--base00);
-      --emphasized-content: var(--base01);
-  }
 
+  base03 = #002b36
+  base02 = #073642
+  base01 = #586e75
+  base00 = #657b83
+  base0 = #839496
+  base1 = #93a1a1
+  base2 = #eee8d5
+  base3 = #fdf6e3
+  yellow = #b58900
+  orange = #cb4b16
+  red = #dc322f
+  magenta = #d33682
+  violet = #6c71c4
+  blue = #268bd2
+  cyan = #2aa198
+  green = #859900
+
+  if solarized == "light"
+    define(background, base3, true)
+    define(background-highlights, base2, true)
+    define(secondary-content, base1, true)
+    define(primary-content, base00, true)
+    define(emphasized-content, base01, true)
+  else
+    define(background, base03, true)
+    define(background-highlights, base02, true)
+    define(secondary-content, base01, true)
+    define(primary-content, base0, true)
+    define(emphasized-content, base1, true)
+  
   /****************************************************************\
   /****************************************************************\
   /****************       Global things      **********************\
@@ -59,16 +54,16 @@
   .aui-button,
   .aui-button:visited,
   a.aui-button 
-      background-color: var(--background-highlights);
-      color: var(--primary-content);
+      background-color: background-highlights
+      color: primary-content
 
   .aui-button-subtle.aui-button:hover .aui-theme-default .aui-button.aui-button-subtle:hover,
   .aui-button:hover 
-      background-color: var(--secondary-content);
-      color: var(--emphasized-content);
+      background-color: secondary-content
+      color: emphasized-content
 
   #navigation-app .iYJWvo 
-      background-color: background !important;
+      background-color: background !important
 
 
   /* keeps forms colored even on edit */
@@ -79,8 +74,8 @@
   form.aui .select,
   form.aui .multi-select,
   form.aui .aui-select2-container 
-      background-color: var(--background-highlights) !important;
-      color: var(--primary-content);
+      background-color: background-highlights !important
+      color: primary-content
 
 
   /* scrollbar stuff */
@@ -89,24 +84,24 @@
   body::-webkit-scrollbar-button,
   body::-webkit-scrollbar-track-piece,
   body::-webkit-scrollbar-thumb 
-      background-color: background;
+      background-color: background
 
   body::-webkit-scrollbar-track 
-      background-color: background;
+      background-color: background
 
   body::-webkit-scrollbar-thumb 
-      background-color: background;
-      outline: 1px solid slategrey;
+      background-color: background
+      outline: 1px solid slategrey
 
 
   /* Dropdown lists */
   form.aui input[type="text"] 
-      color: var(--primary-content);
+      color: primary-content
 
   .aui-dropdown2.aui-style-default,
   .aui-dropdown2.aui-style-default a 
-      background-color: var(--background-highlights);
-      color: var(--primary-content);
+      background-color: background-highlights
+      color: primary-content
 
   .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section a:hover:not([data-operation="color"]),
   .adg3 .aui-dropdown2.aui-style-default .aui-dropdown2-section li:hover :not([data-operation="color"]),
@@ -116,15 +111,15 @@
   .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:focus,
   .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label:hover,
   .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label.active 
-      background-color: var(--secondary-content);
-      color: var(--background-highlights);
+      background-color: secondary-content
+      color: background-highlights
 
   .aui-dropdown2.aui-style-default:hover a 
-      background-color: var(--background-highlights);
-      color: var(--primary-content);
+      background-color: background-highlights
+      color: primary-content
 
   .aui-dropdown2.aui-style-default .ghx-filter-panel-dropdown-label span 
-      color: var(--primary-content);
+      color: primary-content
 
 
   /** End Dropdown Lists **/
@@ -133,16 +128,16 @@
   .labels,
   .labels li,
   .lozenge 
-      background-color: var(--background-highlights) !important;
+      background-color: background-highlights !important
 
   .adg3 .ghx-editable:hover,
   .adg3 .ghx-editable::after,
   .adg3 .editable-field:hover,
   .adg3 .editable-field .overlay-icon.aui-iconfont-edit 
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
   ul.labels li a.lozenge 
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
 
   /****************************************************************\
@@ -155,51 +150,51 @@
   .fEymd,
   .ulFTM,
   .fBYwee 
-      color: var(--primary-content);
+      color: primary-content
 
   .fjtgrF:before,
   .fjtgrF:after 
-      background-color: background;
+      background-color: background
 
   .cHbijf:before,
   .cHbijf:after,
   .idPIJS 
-      background-color: var(--emphasized-content);
+      background-color: emphasized-content
 
   .eRZMHk 
-      background-color: background !important;
+      background-color: background !important
 
   #page-body,
   .issue-view,
   #issue-content,
   .issue-header-content,
   .command-bar 
-      background-color: background !important;
+      background-color: background !important
 
 
   /** navigation expander add border on left so we know where to click */
   .eRZMHk 
-      border-left: 1px solid var(--emphasized-content);
+      border-left: 1px solid emphasized-content
 
   .eRZMHk:hover::before 
-      background: var(--emphasized-content);
+      background: emphasized-content
 
 
   /* make expando button always visible  */
   .bgZnOn::before,
   .bgZnOn::after 
-      background-color: var(--emphasized-content);
-      opacity: 1;
+      background-color: emphasized-content
+      opacity: 1
 
   .eRZMHk button:before,
   .eRZMHk button:after,
   .bgZnOn::before,
   .bgZnOn::after 
-      color: var(--emphasized-content);
-      opacity: 1;
+      color: emphasized-content
+      opacity: 1
 
   .cSCDWK 
-      background-color: background;
+      background-color: background
 
 
   /******************
@@ -213,61 +208,61 @@
   /* make text readable */
   .user-content-block,
   p 
-      color: var(--primary-content) !important;
+      color: primary-content !important
 
   .adg3 .editable-field:hover,
   .adg3 .editable-field:hover > span 
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
 
   /**** Issue Pane ****/
 
   /* Issue Summary / Title */
   .adg3 .aui-page-header #summary-val 
-      color: var(--emphasized-content);
+      color: emphasized-content
 
   .toggle-title 
-      color: var(--emphasized-content);
-      background-color: background !important;
+      color: emphasized-content
+      background-color: background !important
 
   /*.aui-toolbar .toolbar-group .toolbar-trigger {
-      background-color: var(--background-highlights) !important;
-      color: var(--primary-content);
+      background-color: background-highlights !important
+      color: primary-content
   }*/
   .aui-toolbar 
     .toolbar-group 
       .toolbar-trigger
-        background-color: var(--background-highlights) !important;
-        color: var(--primary-content);
+        background-color: background-highlights !important
+        color: primary-content
       .toolbar-trigger:hover
-        background-color: var(--background-highlights) !important;
-        color: var(--emphasized-content);
+        background-color: background-highlights !important
+        color: emphasized-content
 
   #issuedetails
-      color: var(--primary-content);
+      color: primary-content
   #issuedetails > .item > .wrap > strong.name
-      color: var(--violet);
+      color: violet
       
   #customfieldmodule .item > .wrap
-      color: var(--magenta);
-      border-bottom-color: var(--magenta);
+      color: magenta
+      border-bottom-color: magenta
 
   #comment-tabpanel > strong 
-      color: var(--magenta);
-      border-bottom-color: var(--magenta);
+      color: magenta
+      border-bottom-color: magenta
 
   #issuedetails a 
-      color: var(--blue);
+      color: blue
 
   /** issue links / attachments / etc **/
   .adg3 #linkingmodule .links-list dd:hover 
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
   .issue-body-content .module > .mod-header .ops
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
   .adg3 .mod-header ul.ops a
-      color: var(--primary-content);
+      color: primary-content
 
   .aui-button-subtle.aui-button:focus,
   .aui-button-subtle.aui-button:hover,
@@ -275,53 +270,53 @@
   .aui-button:hover,
   .aui-theme-default .aui-button.aui-button-subtle:focus,
   .aui-theme-default .aui-button.aui-button-subtle:hover
-      color: var(--emphasized-content);
+      color: emphasized-content
 
 
   /**** Issue Activity ****/
   .adg3 .issue-data-block.focused,
   .adg3 .issue-data-block:hover
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
   .action-details 
-      color: var(--primary-content);
+      color: primary-content
 
   .action-details a
-      color: var(--blue);
+      color: blue
 
   .tabwrap > .tabs.horizontal > li.active > a,
   .tabwrap > .tabs.horizontal > li.active > strong
-      background-color: background;
-      color: var(--primary-content);
+      background-color: background
+      color: primary-content
 
   .adg3 .tabwrap > ul.tabs > li.active > strong
-      color: var(--magenta);
+      color: magenta
 
   #issue-tabs li a
-      background-color: background;
-      color: var(--primary-content);
+      background-color: background
+      color: primary-content
 
   #issue-tabs
-      border-bottom-color: var(--secondary-content);
+      border-bottom-color: secondary-content
 
 
   /** Right pane **/
   #assignee-val,
   #reporter-val
-      color: var(--primary-content);
+      color: primary-content
 
   #vote-toggle,
   #watching-toggle
-      color: var(--blue);
+      color: blue
 
   #devstatus-container a
-      color: var(--blue);
+      color: blue
 
   time
-      color: var(--primary-content) !important;
+      color: primary-content !important
 
   #greenhopper-agile-issue-web-panel a
-      color: var(--blue);
+      color: blue
 
 
   /** Edit modal **/
@@ -330,45 +325,45 @@
   #edit-issue-dialog .jira-dialog-heading,
   #edit-issue-dialog .jira-dialog-heading h2,
   #edit-issue-dialog .jira-dialog-content .form-body
-      background-color: background;
-      color: var(--primary-content);
+      background-color: background
+      color: primary-content
 
   #edit-issue-dialog.jira-dialog
-      border: 1px solid var(--background-highlights);
+      border: 1px solid background-highlights
 
   .content .field-group .text,
   .content .field-group .select,
   .content .field-group .select option,
   .content .field-group .textarea
-      background-color: var(--background-highlights);
-      color: var(--primary-content);
+      background-color: background-highlights
+      color: primary-content
 
   .content .field-group .text:hover,
   .content .field-group .select:hover,
   .content .field-group .textarea:hover
-      background-color: var(--secondary-content);
-      color: var(--primary-content);
+      background-color: secondary-content
+      color: primary-content
 
   .jira-wikifield .wiki-edit-toolbar
-      background-color: var(--background-highlights);
-      color: var(--primary-content);
+      background-color: background-highlights
+      color: primary-content
 
   .adg3 .aui-button.aui-dropdown2-trigger
-      color: var(--primary-content);
+      color: primary-content
 
   .aui-button.aui-button-subtle,
   .aui-theme-default .aui-button.aui-button-subtle
-      color: var(--secondary-content);
+      color: secondary-content
 
   .aui-button .aui-icon,
   .ops li .aui-icon
-      color: var(--primary-content);
+      color: primary-content
 
   #create-issue-dialog .form-body,
   #create-issue-dialog .form-footer,
   #edit-issue-dialog .form-body,
   #edit-issue-dialog .form-footer
-      background-color: background;
+      background-color: background
 
 
   /****************************************************************\
@@ -377,7 +372,7 @@
   /****************************************************************\
   /****************************************************************/
   #content #subnav-title .subnavigator-title
-      color: var(--primary-content);
+      color: primary-content
 
   #page,
   #page-body,
@@ -398,103 +393,103 @@
   #ghx-detail-contents,
   #ghx-detail-view,
   .ghx-swimlane-header::after
-      background-color: background;
-      box-shadow: none;
+      background-color: background
+      box-shadow: none
 
   .adg3 .ghx-column-headers .ghx-column,
   .adg3 .ghx-columns .ghx-column
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
   .ghx-issue
-      background-color: background !important;
+      background-color: background !important
 
   .ghx-issue *
-      color: var(--primary-content) !important;
+      color: primary-content !important
 
   .ghx-issue:hover
-      background-color: var(--background-highlights) !important;
+      background-color: background-highlights !important
 
   .ghx-issue:hover *
-      color: var(--primary-content) !important;
+      color: primary-content !important
 
   .ghx-issue:hover
-      border: 1px solid var(--emphasized-content);
+      border: 1px solid emphasized-content
 
   .ghx-swimlane-header,
   .ghx-swimlane-header-stalker,
   .ghx-column-header-group
-      background-color: background !important;
+      background-color: background !important
 
   .ghx-parent-group
-      background-color: var(--background-highlights) !important;
-      color: var(--primary-content);
-      border: 1px solid var(--emphasized-content);
+      background-color: background-highlights !important
+      color: primary-content
+      border: 1px solid emphasized-content
 
   .ghx-group > .ghx-summary
-      color: var(--secondary-content);
+      color: secondary-content
 
 
   /** Detail **/
   #ghx-detail-contents
-      border: none;
+      border: none
 
   #ghx-detail-issue
-      color: var(--primary-content);
+      color: primary-content
 
   #ghx-detail-issue a
-      color: var(--blue);
+      color: blue
 
   #ghx-detail-issue .toggle-title
-      color: var(--primary-content);
+      color: primary-content
 
 
   /* color sidebar in details view */
   .ghx-detail-nav-menu ul li.ghx-detail-nav-item,
   .ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected
-      background-color: background;
-      color: var(--primary-content);
+      background-color: background
+      color: primary-content
 
 
   /*recolor icons */
   .ghx-detail-nav-menu ul li.ghx-detail-nav-item span
-      color: var(--primary-content);
+      color: primary-content
 
 
   /* color selected icon in sidebar in details view */
   .ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected a
-      background-color: var(--background-highlights);
-      color: var(--primary-content);
+      background-color: background-highlights
+      color: primary-content
 
 
   /** Open issues page **/
   #page #page-body #content .aui-page-panel
-      background-color: background;
-      color: var(--primary-content);
+      background-color: background
+      color: primary-content
 
 
   /* Fix this later
   #page #page-body #content .aui-page-panel a
-      background-color: background;
-      color: var(--blue);
+      background-color: background
+      color: blue
 
   */
   .subnavigator-title
-      color: var(--primary-content) !important;
+      color: primary-content !important
 
 
   /* Search nav pane */
   .LnFvQ
-      background-color: var(--background-highlights) !important;
+      background-color: background-highlights !important
 
   .LnFvQ span
-      color: var(--secondary-content);
+      color: secondary-content
 
   .ipIHid
-      background-color: var(--background-highlights) !important;
+      background-color: background-highlights !important
 
   .ewvMIF,
   .kNFuQa
-      background-color: transparent;
+      background-color: transparent
 
   body #page #page-body h1,
   body #page #page-body h2,
@@ -502,37 +497,37 @@
   body #page #page-body h4,
   body #page #page-body h5,
   body #page #page-body h6
-      color: var(--primary-content) !important;
+      color: primary-content !important
 
 
   /******** Backlog ***************/
   #ghx-backlog,
   .ghx-backlog-container
-      background-color: background;
+      background-color: background
 
   .ghx-issue-compact,
   .ghx-issue-compact .ghx-end
-      background-color: background;
+      background-color: background
 
   .adg3 .js-issue.ghx-issue-compact:hover,
   .adg3 .js-issue.ghx-issue-compact:hover .ghx-items-container
-      background-color: var(--background-highlights);
+      background-color: background-highlights
 
   .adg3 .js-issue.ghx-selected,
   .adg3 .js-issue.ghx-selected .ghx-items-container
-         background-color: var(--background-highlights);
+         background-color: background-highlights
   .no-title .activity-stream-container
-    background-color: background;
+    background-color: background
     
   #gadget-0
     html
       body
         .view
-          background-color: background;
+          background-color: background
   activitystream-container 
     actionContainer
-      background-color: background;
+      background-color: background
       
   span.blender
     background: none !important
->>>>>>> Stashed changes
+
