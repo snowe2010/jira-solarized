@@ -8,13 +8,13 @@
 @supportURL http://github.com/snowe2010/jira-solarized/issues
 @license MIT
 @var select solarized 'Solarized Scheme' {
-    "Light": "light",
-    "Dark": "dark"
+    "Light": "Light",
+    "Dark": "Dark"
 }
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document regexp("^https?://(.*?).atlassian.net/(secure|browse|plugins).*")
-
+  /** Solarized Color Scheme **/
   base03 = #002b36
   base02 = #073642
   base01 = #586e75
@@ -32,18 +32,18 @@
   cyan = #2aa198
   green = #859900
 
-  if solarized == "light"
-    define(background, base3, true)
-    define(background-highlights, base2, true)
-    define(secondary-content, base1, true)
-    define(primary-content, base00, true)
-    define(emphasized-content, base01, true)
-  else
-    define(background, base03, true)
-    define(background-highlights, base02, true)
-    define(secondary-content, base01, true)
-    define(primary-content, base0, true)
-    define(emphasized-content, base1, true)
+  if solarized == 'Light'
+    background = base3
+    background-highlights = base2
+    secondary-content = base1
+    primary-content = base00
+    emphasized-content = base01
+  else if solarized == 'Dark'
+    background = base03
+    background-highlights = base02
+    secondary-content = base01
+    primary-content = base0
+    emphasized-content = base1
   
   /****************************************************************\
   /****************************************************************\
@@ -491,12 +491,8 @@
   .kNFuQa
       background-color: transparent
 
-  body #page #page-body h1,
-  body #page #page-body h2,
-  body #page #page-body h3,
-  body #page #page-body h4,
-  body #page #page-body h5,
-  body #page #page-body h6
+  body #page #page-body 
+    h1, h2, h3, h4, h5, h6
       color: primary-content !important
 
 
