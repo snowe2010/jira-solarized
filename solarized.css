@@ -67,13 +67,8 @@
 
 
   /* keeps forms colored even on edit */
-  form.aui .text,
-  form.aui .password,
-  form.aui .upfile,
-  form.aui .textarea,
-  form.aui .select,
-  form.aui .multi-select,
-  form.aui .aui-select2-container 
+  form.aui 
+    .text, .password, .upfile, .textarea, .select, .multi-select, .aui-select2-container 
       background-color: background-highlights !important
       color: primary-content
 
@@ -95,7 +90,8 @@
 
 
   /* Dropdown lists */
-  form.aui input[type="text"] 
+  form.aui 
+    input[type="text"] 
       color: primary-content
 
   .aui-dropdown2.aui-style-default,
@@ -130,14 +126,17 @@
   .lozenge 
       background-color: background-highlights !important
 
-  .adg3 .ghx-editable:hover,
-  .adg3 .ghx-editable::after,
-  .adg3 .editable-field:hover,
-  .adg3 .editable-field .overlay-icon.aui-iconfont-edit 
+  .adg3 
+    .ghx-editable:hover,
+    .ghx-editable::after,
+    .editable-field:hover,
+    .editable-field .overlay-icon.aui-iconfont-edit 
       background-color: background-highlights
 
-  ul.labels li a.lozenge 
-      background-color: background-highlights
+  ul.labels 
+    li 
+      a.lozenge 
+        background-color: background-highlights
 
 
   /****************************************************************\
@@ -210,16 +209,20 @@
   p 
       color: primary-content !important
 
-  .adg3 .editable-field:hover,
-  .adg3 .editable-field:hover > span 
-      background-color: background-highlights
+  .adg3 
+    .editable-field
+      &:hover,
+      & > span 
+        background-color: background-highlights
 
 
   /**** Issue Pane ****/
 
   /* Issue Summary / Title */
-  .adg3 .aui-page-header #summary-val 
-      color: emphasized-content
+  .adg3 
+    .aui-page-header 
+      #summary-val 
+        color: emphasized-content
 
   .toggle-title 
       color: emphasized-content
@@ -239,8 +242,8 @@
         color: emphasized-content
 
   #issuedetails
-      color: primary-content
-  #issuedetails > .item > .wrap > strong.name
+    color: primary-content
+    & > .item > .wrap > strong.name
       color: violet
       
   #customfieldmodule .item > .wrap
@@ -255,14 +258,23 @@
       color: blue
 
   /** issue links / attachments / etc **/
-  .adg3 #linkingmodule .links-list dd:hover 
-      background-color: background-highlights
+  .adg3 
+    #linkingmodule 
+      .links-list 
+        dd:hover 
+          background-color: background-highlights
 
-  .issue-body-content .module > .mod-header .ops
-      background-color: background-highlights
+  .issue-body-content 
+    .module 
+      > .mod-header 
+        .ops
+          background-color: background-highlights
 
-  .adg3 .mod-header ul.ops a
-      color: primary-content
+  .adg3 
+    .mod-header 
+      ul.ops 
+        a
+          color: primary-content
 
   .aui-button-subtle.aui-button:focus,
   .aui-button-subtle.aui-button:hover,
@@ -274,14 +286,16 @@
 
 
   /**** Issue Activity ****/
-  .adg3 .issue-data-block.focused,
-  .adg3 .issue-data-block:hover
+  .adg3 
+    .issue-data-block.focused,
+    .issue-data-block:hover
       background-color: background-highlights
 
   .action-details 
       color: primary-content
 
-  .action-details a
+  .action-details 
+    a
       color: blue
 
   .tabwrap > .tabs.horizontal > li.active > a,
@@ -289,33 +303,37 @@
       background-color: background
       color: primary-content
 
-  .adg3 .tabwrap > ul.tabs > li.active > strong
+  .adg3 
+    .tabwrap > ul.tabs > li.active > strong
       color: magenta
 
-  #issue-tabs li a
-      background-color: background
-      color: primary-content
+  #issue-tabs 
+    li 
+      a
+        background-color: background
+        color: primary-content
 
   #issue-tabs
-      border-bottom-color: secondary-content
+    border-bottom-color: secondary-content
 
 
   /** Right pane **/
   #assignee-val,
   #reporter-val
-      color: primary-content
+    color: primary-content
 
   #vote-toggle,
   #watching-toggle
-      color: blue
+    color: blue
 
   #devstatus-container a
-      color: blue
+    color: blue
 
   time
-      color: primary-content !important
+    color: primary-content !important
 
-  #greenhopper-agile-issue-web-panel a
+  #greenhopper-agile-issue-web-panel 
+    a
       color: blue
 
 
@@ -331,24 +349,26 @@
   #edit-issue-dialog.jira-dialog
       border: 1px solid background-highlights
 
-  .content .field-group .text,
-  .content .field-group .select,
-  .content .field-group .select option,
-  .content .field-group .textarea
-      background-color: background-highlights
-      color: primary-content
-
-  .content .field-group .text:hover,
-  .content .field-group .select:hover,
-  .content .field-group .textarea:hover
-      background-color: secondary-content
-      color: primary-content
+  .content 
+    .field-group 
+      .text, 
+      .select, 
+      .select option, 
+      .textarea
+        background-color: background-highlights
+        color: primary-content
+      .text:hover,
+      .select:hover,
+      .textarea:hover
+        background-color: secondary-content
+        color: primary-content
 
   .jira-wikifield .wiki-edit-toolbar
       background-color: background-highlights
       color: primary-content
 
-  .adg3 .aui-button.aui-dropdown2-trigger
+  .adg3 
+    .aui-button.aui-dropdown2-trigger
       color: primary-content
 
   .aui-button.aui-button-subtle,
@@ -371,8 +391,10 @@
   /****************       Kanban Board       **********************\
   /****************************************************************\
   /****************************************************************/
-  #content #subnav-title .subnavigator-title
-      color: primary-content
+  #content 
+    #subnav-title 
+      .subnavigator-title
+        color: primary-content
 
   #page,
   #page-body,
@@ -396,24 +418,20 @@
       background-color: background
       box-shadow: none
 
-  .adg3 .ghx-column-headers .ghx-column,
-  .adg3 .ghx-columns .ghx-column
-      background-color: background-highlights
+  .adg3 
+    .ghx-column-headers, .ghx-columns 
+      .ghx-column
+        background-color: background-highlights
 
   .ghx-issue
-      background-color: background !important
-
-  .ghx-issue *
+    background-color: background !important
+    *
       color: primary-content !important
-
-  .ghx-issue:hover
+    &:hover
       background-color: background-highlights !important
-
-  .ghx-issue:hover *
-      color: primary-content !important
-
-  .ghx-issue:hover
       border: 1px solid emphasized-content
+      *
+        color: primary-content !important
 
   .ghx-swimlane-header,
   .ghx-swimlane-header-stalker,
@@ -428,43 +446,40 @@
   .ghx-group > .ghx-summary
       color: secondary-content
 
-
   /** Detail **/
   #ghx-detail-contents
       border: none
 
   #ghx-detail-issue
-      color: primary-content
-
-  #ghx-detail-issue a
+    color: primary-content
+    a
       color: blue
-
-  #ghx-detail-issue .toggle-title
+    .toggle-title
       color: primary-content
 
 
   /* color sidebar in details view */
-  .ghx-detail-nav-menu ul li.ghx-detail-nav-item,
-  .ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected
-      background-color: background
-      color: primary-content
-
-
-  /*recolor icons */
-  .ghx-detail-nav-menu ul li.ghx-detail-nav-item span
-      color: primary-content
-
-
-  /* color selected icon in sidebar in details view */
-  .ghx-detail-nav-menu ul li.ghx-detail-nav-item.ghx-selected a
-      background-color: background-highlights
-      color: primary-content
-
-
+  .ghx-detail-nav-menu 
+    ul 
+      li
+        &.ghx-detail-nav-item,
+        &.ghx-detail-nav-item.ghx-selected
+          background-color: background
+          color: primary-content
+          a /* color selected icon in sidebar in details view */
+            background-color: background-highlights
+            color: primary-content
+        &.ghx-detail-nav-item
+          span
+            color: primary-content /*recolor icons */
+  
   /** Open issues page **/
-  #page #page-body #content .aui-page-panel
-      background-color: background
-      color: primary-content
+  #page 
+    #page-body 
+      #content 
+        .aui-page-panel
+          background-color: background
+          color: primary-content
 
 
   /* Fix this later
@@ -505,15 +520,18 @@
   .ghx-issue-compact .ghx-end
       background-color: background
 
-  .adg3 .js-issue.ghx-issue-compact:hover,
-  .adg3 .js-issue.ghx-issue-compact:hover .ghx-items-container
+  .adg3 
+    .js-issue.ghx-issue-compact:hover,
+    .js-issue.ghx-issue-compact:hover .ghx-items-container
       background-color: background-highlights
 
-  .adg3 .js-issue.ghx-selected,
-  .adg3 .js-issue.ghx-selected .ghx-items-container
+  .adg3 
+    .js-issue.ghx-selected,
+    .js-issue.ghx-selected .ghx-items-container
          background-color: background-highlights
-  .no-title .activity-stream-container
-    background-color: background
+  .no-title 
+    .activity-stream-container
+      background-color: background
     
   #gadget-0
     html
