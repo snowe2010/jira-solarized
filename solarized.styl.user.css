@@ -33,6 +33,8 @@
   cyan = #2aa198
   green = #859900
 
+
+
   if solarized == 'Light'
     background = base3
     background-highlights = base2
