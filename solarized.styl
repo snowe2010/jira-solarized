@@ -13,7 +13,7 @@
 }
 @preprocessor stylus
 ==/UserStyle== */
-@-moz-document regexp("^https?://(.*?).atlassian.net/(secure|browse|plugins).*")
+@-moz-document regexp("^https?:\/\/(.*?).atlassian.net\/(secure|browse|plugins).*")
   /** Solarized Color Scheme **/
   base03 = #002b36
   base02 = #073642
@@ -61,10 +61,6 @@
   .aui-button:hover 
       background-color: secondary-content
       color: emphasized-content
-
-  #navigation-app .iYJWvo 
-      background-color: background !important
-
 
   /* keeps forms colored even on edit */
   form.aui 
@@ -143,14 +139,34 @@
   /****************************************************************\
   /****************       Navigation bar     **********************\
   /****************************************************************\
-  /****************************************************************\
+  /****************************************************************/
+
+  
+  #navigation-app
+    color: primary-content
+    div
+      div
+        color: primary-content
+        button
+          color: primary-content
+        div:nth-child(1)
+          div:nth-child(1)
+            div:nth-child(1)
+              div:nth-child(1)
+                div:nth-child(1)
+                  background-color: background !important
+                  div
+                    div
+                      div
+                        div
+                          color: primary-content
 
   /* Reverse colors in navigation-app drawer */
-  .fEymd,
+/*  .fEymd,
   .ulFTM,
   .fBYwee 
       color: primary-content
-
+*/
   .fjtgrF:before,
   .fjtgrF:after 
       background-color: background
@@ -160,7 +176,8 @@
   .idPIJS 
       background-color: emphasized-content
 
-  .eRZMHk 
+  .eRZMHk,
+  .gNjuyo 
       background-color: background !important
 
   #page-body,
@@ -545,3 +562,8 @@
   span.blender
     background: none !important
 
+
+  .navigator-container
+    .navigator-body
+      .contained-content
+        background-color: background
