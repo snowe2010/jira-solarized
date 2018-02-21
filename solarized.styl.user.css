@@ -477,6 +477,12 @@
     .toggle-title
       color: primary-content
 
+  .lyKHU
+    width: auto !important
+    div
+      background-color: background !important
+      input[placeholder="Add a comment…"]
+        background-color: background-highlights
 
   /* color sidebar in details view */
   .ghx-detail-nav-menu 
