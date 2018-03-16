@@ -33,8 +33,6 @@
   cyan = #2aa198
   green = #859900
 
-
-
   if solarized == 'Light'
     background = base3
     background-highlights = base2
@@ -48,6 +46,10 @@
     primary-content = base0
     emphasized-content = base1
   
+  div[role="dialog"]
+    background-color: background
+    color: primary-content
+
   /****************************************************************\
   /****************************************************************\
   /****************       Global things      **********************\
@@ -240,6 +242,8 @@
 
   /* Issue Summary / Title */
   .adg3 
+    .issue-container
+      max-width: none
     .aui-page-header 
       #summary-val 
         color: emphasized-content
@@ -480,8 +484,8 @@
   .lyKHU
     width: auto !important
     div
-      background-color: background !important
-      input[placeholder="Add a comment…"]
+	    background-color: background !important
+			input[placeholder="Add a comment…"]
         background-color: background-highlights
 
   /* color sidebar in details view */
